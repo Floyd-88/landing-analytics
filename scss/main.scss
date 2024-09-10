@@ -1,0 +1,13 @@
+@charset "UTF-8";
+
+@import "reset";
+@import "mixin";
+@import "fonts";
+@import "variables";
+@import "core";
+
+@import "./blocks/section_1.scss";
+@import "./blocks/section_2.scss";
+@import "./blocks/section_3.scss";
+@import "./blocks/section_4.scss";
+@import "./blocks/footer.scss";

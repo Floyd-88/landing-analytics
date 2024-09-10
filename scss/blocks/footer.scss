@@ -1,0 +1,79 @@
+.footer {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 69px;
+    padding-bottom: 111px;
+
+    &__logo {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        text-decoration: none;
+        font-weight: 700;
+        color: $text-secondary;
+
+        p {
+            text-transform: uppercase;
+        }
+    }
+
+    &__list {
+        display: flex;
+        flex-direction: row;
+        gap: 36px;
+    }
+
+    &__item {
+        position: relative;
+        overflow: hidden;
+        z-index: 2;
+
+        a {
+            font-weight: 400;
+            font-size: 14px;
+            color: $text-secondary;
+            text-decoration: none;
+        }
+
+        &::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            height: 2px;
+            background-color: $text-secondary;
+            transform: scaleX(0);
+            transform-origin: bottom left;
+            transition: transform 0.3s ease;
+            z-index: -1;
+        }
+
+        &:hover::after {
+            transform: scaleX(1); // Показывать подчеркивание при наведении
+            transform-origin: bottom left; // Изменить точку начала анимации при наведении
+        }
+
+    }
+
+    &__social {
+        display: flex;
+        gap: 40px;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .footer {
+        padding: 37px 20px;
+    }
+}
+
+@media screen and (max-width: 780px) {
+
+    .footer {
+        &__nav {
+            display: none;
+        }
+    }
+
+}
